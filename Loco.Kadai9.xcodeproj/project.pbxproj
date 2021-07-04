@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384D79E02690142C00391277 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 384D79DF2690142C00391277 /* .swiftlint.yml */; };
 		38F123A4268FFEE20071EED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F123A3268FFEE20071EED7 /* AppDelegate.swift */; };
 		38F123A6268FFEE20071EED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F123A5268FFEE20071EED7 /* SceneDelegate.swift */; };
-		38F123A8268FFEE20071EED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F123A7268FFEE20071EED7 /* ViewController.swift */; };
+		38F123A8268FFEE20071EED7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F123A7268FFEE20071EED7 /* MainViewController.swift */; };
 		38F123AB268FFEE20071EED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F123A9268FFEE20071EED7 /* Main.storyboard */; };
 		38F123AD268FFEE30071EED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F123AC268FFEE30071EED7 /* Assets.xcassets */; };
 		38F123B0268FFEE30071EED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F123AE268FFEE30071EED7 /* LaunchScreen.storyboard */; };
+		38F123B8269010C50071EED7 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F123B7269010C50071EED7 /* SelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		384D79DF2690142C00391277 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38F123A0268FFEE20071EED7 /* Loco.Kadai9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loco.Kadai9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F123A3268FFEE20071EED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38F123A5268FFEE20071EED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38F123A7268FFEE20071EED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38F123A7268FFEE20071EED7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		38F123AA268FFEE20071EED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38F123AC268FFEE30071EED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38F123AF268FFEE30071EED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38F123B1268FFEE30071EED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38F123B7269010C50071EED7 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		38F12397268FFEE20071EED7 = {
 			isa = PBXGroup;
 			children = (
+				384D79DF2690142C00391277 /* .swiftlint.yml */,
 				38F123A2268FFEE20071EED7 /* Loco.Kadai9 */,
 				38F123A1268FFEE20071EED7 /* Products */,
 			);
@@ -58,10 +63,11 @@
 			children = (
 				38F123A3268FFEE20071EED7 /* AppDelegate.swift */,
 				38F123A5268FFEE20071EED7 /* SceneDelegate.swift */,
-				38F123A7268FFEE20071EED7 /* ViewController.swift */,
+				38F123A7268FFEE20071EED7 /* MainViewController.swift */,
+				38F123B7269010C50071EED7 /* SelectionViewController.swift */,
+				38F123AE268FFEE30071EED7 /* LaunchScreen.storyboard */,
 				38F123A9268FFEE20071EED7 /* Main.storyboard */,
 				38F123AC268FFEE30071EED7 /* Assets.xcassets */,
-				38F123AE268FFEE30071EED7 /* LaunchScreen.storyboard */,
 				38F123B1268FFEE30071EED7 /* Info.plist */,
 			);
 			path = Loco.Kadai9;
@@ -77,6 +83,7 @@
 				38F1239C268FFEE20071EED7 /* Sources */,
 				38F1239D268FFEE20071EED7 /* Frameworks */,
 				38F1239E268FFEE20071EED7 /* Resources */,
+				38F123B9269013C80071EED7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -124,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384D79E02690142C00391277 /* .swiftlint.yml in Resources */,
 				38F123B0268FFEE30071EED7 /* LaunchScreen.storyboard in Resources */,
 				38F123AD268FFEE30071EED7 /* Assets.xcassets in Resources */,
 				38F123AB268FFEE20071EED7 /* Main.storyboard in Resources */,
@@ -132,12 +140,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38F123B9269013C80071EED7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38F1239C268FFEE20071EED7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F123A8268FFEE20071EED7 /* ViewController.swift in Sources */,
+				38F123A8268FFEE20071EED7 /* MainViewController.swift in Sources */,
+				38F123B8269010C50071EED7 /* SelectionViewController.swift in Sources */,
 				38F123A4268FFEE20071EED7 /* AppDelegate.swift in Sources */,
 				38F123A6268FFEE20071EED7 /* SceneDelegate.swift in Sources */,
 			);

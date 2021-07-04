@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Loco_Kadai9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iao-jl-9ZI">
+                                <rect key="frame" x="37" y="130" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGN-Ie-CDn">
+                                <rect key="frame" x="181" y="130" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dl6-5i-o5a">
+                                <rect key="frame" x="307" y="125" width="31" height="30"/>
+                                <state key="normal" title="入力"/>
+                                <connections>
+                                    <segue destination="NzY-77-P6l" kind="presentation" id="aWw-0W-vLp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yGN-Ie-CDn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="E2U-hP-XXh"/>
+                            <constraint firstItem="iao-jl-9ZI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="R7i-37-dZO"/>
+                            <constraint firstItem="yGN-Ie-CDn" firstAttribute="leading" secondItem="iao-jl-9ZI" secondAttribute="trailing" constant="74" id="RSC-Kx-oXd"/>
+                            <constraint firstItem="dl6-5i-o5a" firstAttribute="leading" secondItem="yGN-Ie-CDn" secondAttribute="trailing" constant="74" id="VVZ-LA-5OA"/>
+                            <constraint firstItem="dl6-5i-o5a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="a4R-sh-IRN"/>
+                            <constraint firstItem="yGN-Ie-CDn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgF-1q-bRD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="prefectureLabel" destination="yGN-Ie-CDn" id="tiH-ms-nMp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="126"/>
+        </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="kDv-7P-TSm">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Zew-7C-2AM" customClass="SelectionViewController" customModule="Loco_Kadai9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dag-NP-GAV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXm-eS-rDI">
+                                <rect key="frame" x="191.5" y="201" width="31" height="30"/>
+                                <state key="normal" title="東京"/>
+                                <connections>
+                                    <action selector="selectTokyoButton:" destination="Zew-7C-2AM" eventType="touchUpInside" id="SAp-mK-lu0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf5-pu-ChC">
+                                <rect key="frame" x="176" y="250" width="62" height="30"/>
+                                <state key="normal" title="神奈川県"/>
+                                <connections>
+                                    <action selector="selectKanagawaButton:" destination="Zew-7C-2AM" eventType="touchUpInside" id="hjh-Dd-T0A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7L-f4-HJ4">
+                                <rect key="frame" x="184" y="299" width="46" height="30"/>
+                                <state key="normal" title="埼玉県"/>
+                                <connections>
+                                    <action selector="selectSaitamaButton:" destination="Zew-7C-2AM" eventType="touchUpInside" id="3td-ZG-43i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDj-ir-M2W">
+                                <rect key="frame" x="184" y="348" width="46" height="30"/>
+                                <state key="normal" title="千葉県"/>
+                                <connections>
+                                    <action selector="selectChibaButton:" destination="Zew-7C-2AM" eventType="touchUpInside" id="aOS-B5-4V3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YAI-ME-gRr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YAI-ME-gRr" firstAttribute="trailing" secondItem="m7L-f4-HJ4" secondAttribute="trailing" constant="184" id="00I-iA-agi"/>
+                            <constraint firstItem="Hf5-pu-ChC" firstAttribute="leading" secondItem="YAI-ME-gRr" secondAttribute="leading" constant="176" id="11N-ic-xOz"/>
+                            <constraint firstItem="m7L-f4-HJ4" firstAttribute="top" secondItem="Hf5-pu-ChC" secondAttribute="bottom" constant="19" id="4Ut-rF-DZm"/>
+                            <constraint firstItem="DXm-eS-rDI" firstAttribute="centerX" secondItem="Dag-NP-GAV" secondAttribute="centerX" id="9Gp-gi-UB6"/>
+                            <constraint firstItem="YAI-ME-gRr" firstAttribute="trailing" secondItem="HDj-ir-M2W" secondAttribute="trailing" constant="184" id="GtA-AY-zl1"/>
+                            <constraint firstItem="DXm-eS-rDI" firstAttribute="leading" secondItem="YAI-ME-gRr" secondAttribute="leading" constant="191.5" id="QC3-Ie-Lia"/>
+                            <constraint firstItem="HDj-ir-M2W" firstAttribute="leading" secondItem="YAI-ME-gRr" secondAttribute="leading" constant="184" id="bTf-mN-BTg"/>
+                            <constraint firstItem="DXm-eS-rDI" firstAttribute="top" secondItem="YAI-ME-gRr" secondAttribute="top" constant="113" id="dvs-Mq-SP8"/>
+                            <constraint firstItem="YAI-ME-gRr" firstAttribute="trailing" secondItem="Hf5-pu-ChC" secondAttribute="trailing" constant="176" id="lBd-kK-ZGN"/>
+                            <constraint firstItem="Hf5-pu-ChC" firstAttribute="top" secondItem="DXm-eS-rDI" secondAttribute="bottom" constant="19" id="nHU-kN-ZZR"/>
+                            <constraint firstItem="HDj-ir-M2W" firstAttribute="top" secondItem="m7L-f4-HJ4" secondAttribute="bottom" constant="19" id="qTr-ct-kbB"/>
+                            <constraint firstItem="YAI-ME-gRr" firstAttribute="trailing" secondItem="DXm-eS-rDI" secondAttribute="trailing" constant="191.5" id="ute-Yi-Ege"/>
+                            <constraint firstItem="m7L-f4-HJ4" firstAttribute="leading" secondItem="YAI-ME-gRr" secondAttribute="leading" constant="184" id="zJE-Rz-WN1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uji-v6-0Qr">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="mJh-fQ-GqV">
+                            <connections>
+                                <action selector="cancelButton" destination="Zew-7C-2AM" id="k3e-0i-SFn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMu-ty-OSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.985507246377" y="125.89285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yaO-qI-Qvl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NzY-77-P6l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G2C-XC-xoR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zew-7C-2AM" kind="relationship" relationship="rootViewController" id="9QL-Oo-rEx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPZ-2U-qvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
