@@ -32,7 +32,7 @@
                                 <rect key="frame" x="293" y="125" width="31" height="30"/>
                                 <state key="normal" title="入力"/>
                                 <connections>
-                                    <segue destination="NzY-77-P6l" kind="presentation" id="aWw-0W-vLp"/>
+                                    <segue destination="NzY-77-P6l" kind="presentation" identifier="ShowSelection" id="aWw-0W-vLp"/>
                                 </connections>
                             </button>
                         </subviews>
