@@ -1,11 +1,21 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak private var prefectureLabel: UILabel!
-    internal var prefectureName = "未経験"
+    @IBOutlet private weak var prefectureLabel: UILabel!
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        prefectureLabel.text = prefectureName
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
+        case "ShowSelection":
+            guard let navigationController = segue.destination as? UINavigationController, let selectionController = navigationController.topViewController as? SelectionViewController else { return }
+            selectionController.delegate = self
+        default:
+            break
+        }
+    }
+}
+extension MainViewController: selectionViewControllerDelegate {
+    func didSelectPrefecture(name: String) {
+        prefectureLabel.text = name
     }
 }

@@ -1,10 +1,14 @@
 import UIKit
 
+protocol selectionViewControllerDelegate: AnyObject {
+    func didSelectPrefecture(name: String)
+}
+
 class SelectionViewController: UIViewController {
+     weak var delegate: selectionViewControllerDelegate?
+
     private func selectPrefectureAndReturn(prefecture: String) {
-        if let mainViewController = presentingViewController as? MainViewController {
-            mainViewController.prefectureName = prefecture
-        }
+        self.delegate?.didSelectPrefecture(name: prefecture)
         dismiss(animated: true, completion: nil)
     }
     @IBAction private func cancelButton() {

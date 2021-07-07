@@ -32,7 +32,7 @@
                                 <rect key="frame" x="293" y="125" width="31" height="30"/>
                                 <state key="normal" title="入力"/>
                                 <connections>
-                                    <segue destination="NzY-77-P6l" kind="presentation" id="aWw-0W-vLp"/>
+                                    <segue destination="NzY-77-P6l" kind="presentation" identifier="ShowSelection" id="fhI-u9-myb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,12 +48,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="prefectureLabel" destination="yGN-Ie-CDn" id="tiH-ms-nMp"/>
+                        <outlet property="prefectureLabel" destination="yGN-Ie-CDn" id="0I2-xH-s4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="126"/>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
         <!--Selection View Controller-->
         <scene sceneID="kDv-7P-TSm">
@@ -122,6 +122,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NzY-77-P6l" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6Z5-eW-dQm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G2C-XC-xoR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
